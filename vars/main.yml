@@ -3,4 +3,7 @@ mysql_conf_dir:
   "CentOS": /etc/my.cnf.d
   "Ubuntu": /etc/mysql/conf.d
 
+mysql_user: mysql
+
+# https://mariadb.com/kb/en/mariadb/default-data-directory-for-mariadb/
 mysql_data_dir: /var/lib/mysql
