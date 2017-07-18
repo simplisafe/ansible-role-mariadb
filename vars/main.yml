@@ -2,3 +2,5 @@
 mysql_conf_dir:
   "CentOS": /etc/my.cnf.d
   "Ubuntu": /etc/mysql/conf.d
+
+mysql_data_dir: /var/lib/mysql

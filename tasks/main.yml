@@ -10,6 +10,10 @@
   when: mysql_conf_tpl != 'change_me'
   notify: restart mysql
 
+- name: Installing System Tables
+  action: command /usr/bin/mysql_install_db --datadir ${mysql_data_dir} creates=${mysql_data_dir}/mysql
+  when: mysql_install_system_tables
+
 - name: Start and enable service
   service: name=mysql state=started enabled=yes
 
