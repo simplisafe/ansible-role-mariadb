@@ -13,7 +13,8 @@
 # https://mariadb.com/kb/en/mariadb/installing-system-tables-mysql_install_db/
 - name: Installing System Tables
   command: "/usr/bin/mysql_install_db --user={{ mysql_user }} --datadir={{ mysql_data_dir }}"
-  creates: "{{ mysql_data_dir }}/mysql"
+  args:
+    creates: "{{ mysql_data_dir }}/mysql"
   when: mysql_install_system_tables
 
 - name: Start and enable service
